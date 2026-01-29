@@ -134,8 +134,8 @@ const Navbar: React.FC<NavbarProps> = ({ setView, currentView }) => {
               </div>
 
               <div className="mt-2 shrink-0 pb-2">
-                <button className="w-full bg-black dark:bg-white text-white dark:text-black py-5 md:py-5 rounded-2xl md:rounded-2xl text-[13px] md:text-[14px] font-black uppercase tracking-widest shadow-lg active:scale-95 transition-transform hover:bg-zinc-900 dark:hover:bg-zinc-200">
-                  Help us validate
+                <button className="w-full bg-black text-white py-5 md:py-5 rounded-2xl md:rounded-2xl text-[13px] md:text-[14px] font-black uppercase tracking-widest shadow-lg active:scale-95 transition-transform hover:bg-zinc-900">
+                  Respond a Few Cuestions
                 </button>
               </div>
             </motion.div>
