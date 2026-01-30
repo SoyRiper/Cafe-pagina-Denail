@@ -15,14 +15,14 @@ const CTASection = () => {
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16 md:gap-24">
                 <div className="flex-[1.2] text-left">
                     <motion.h2 {...fadeInUp} className="heading-massive mb-8 text-black dark:text-white transition-colors">
-                        {t.waitlist.title}
+                        {t.buildFuture.title}
                     </motion.h2>
                     <motion.div
                         {...fadeInUp}
                         transition={{ ...fadeInUp.transition, delay: 0.1 }}
                     >
                         <button className="btn-main btn-orange">
-                            {t.hero.cta}
+                            {t.buildFuture.cta}
                         </button>
                     </motion.div>
                 </div>
@@ -37,7 +37,7 @@ const CTASection = () => {
                     <img
                         src="/01/correct_machine.png"
                         className="w-full h-auto object-contain drop-shadow-2xl"
-                        alt={t.waitlist.description}
+                        alt={t.buildFuture.title}
                     />
                 </motion.div>
             </div>

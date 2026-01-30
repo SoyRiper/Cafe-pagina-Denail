@@ -16,18 +16,18 @@ const Features = () => {
 
     const features = [
         {
-            title: t.features.items[0].title,
-            description: t.features.items[0].description,
+            title: t.fuelFlow.items[0].title,
+            description: t.fuelFlow.items[0].description,
             img: "/01/image 6.png"
         },
         {
-            title: t.features.items[1].title,
-            description: t.features.items[1].description,
+            title: t.fuelFlow.items[1].title,
+            description: t.fuelFlow.items[1].description,
             img: "/01/image 5.png"
         },
         {
-            title: t.features.items[2].title,
-            description: t.features.items[2].description,
+            title: t.fuelFlow.items[2].title,
+            description: t.fuelFlow.items[2].description,
             img: "/01/image 7.png"
         }
     ];
@@ -46,14 +46,14 @@ const Features = () => {
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
                     <motion.div {...fadeInUp} className="max-w-2xl text-left">
                         <motion.h2 {...fadeInUp} className="heading-impact mb-6 text-black dark:text-white transition-colors">
-                            {t.features.title}
+                            {t.fuelFlow.title}
                         </motion.h2>
                         <motion.p
                             {...fadeInUp}
                             transition={{ ...fadeInUp.transition, delay: 0.1 }}
                             className="subheading-custom text-zinc-500 dark:text-zinc-400 max-w-2xl text-left transition-colors"
                         >
-                            {t.features.subtitle}
+                            {t.fuelFlow.subtitle}
                         </motion.p>
                     </motion.div>
                 </div>

@@ -31,7 +31,7 @@ const Waitlist = () => {
             {...fadeInUp}
             className="px-8 py-4 bg-gradient-to-r from-[#FFBD7E] to-[#FB923C] text-white rounded-xl font-bold text-lg shadow-lg shadow-orange-500/20 hover:scale-105 transition-all duration-300"
           >
-            {t.hero.cta}
+            {t.waitlist.footer.cta}
           </motion.button>
         </div>
 
@@ -44,10 +44,10 @@ const Waitlist = () => {
             <div className="flex-shrink-0 z-10 mb-2">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-4 h-4 bg-white rounded-sm"></div>
-                <span className="text-[10px] font-bold text-white uppercase tracking-wider">{t.waitlist.card1Badge}</span>
+                <span className="text-[10px] font-bold text-white uppercase tracking-wider">{t.waitlist.card1.badge}</span>
               </div>
-              <h3 className="font-bold text-white text-3xl md:text-[32px] mb-2 leading-tight tracking-tight">{t.waitlist.card1Title}</h3>
-              <p className="text-white/80 text-[11px] font-medium leading-relaxed max-w-sm">{t.waitlist.card1Desc}</p>
+              <h3 className="font-bold text-white text-3xl md:text-[32px] mb-2 leading-tight tracking-tight">{t.waitlist.card1.title}</h3>
+              <p className="text-white/80 text-[11px] font-medium leading-relaxed max-w-sm">{t.waitlist.card1.description}</p>
             </div>
             <div className="w-full aspect-[4/3] mt-6 overflow-hidden rounded-[1.5rem] shadow-2xl bg-white/5">
               <img src="/03/image 35.png" className="w-full h-full object-cover object-center" alt="Coffee and gadgets" />
@@ -62,10 +62,10 @@ const Waitlist = () => {
             <div className="flex-shrink-0 z-10 mb-2">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-4 h-4 bg-white rounded-sm"></div>
-                <span className="text-[10px] font-bold text-white uppercase tracking-wider">{t.waitlist.card2Badge}</span>
+                <span className="text-[10px] font-bold text-white uppercase tracking-wider">{t.waitlist.card2.badge}</span>
               </div>
-              <h3 className="font-bold text-white text-3xl md:text-[32px] mb-2 leading-tight tracking-tight">{t.waitlist.card2Title}</h3>
-              <p className="text-white/80 text-[11px] font-medium leading-relaxed max-w-sm">{t.waitlist.card2Desc}</p>
+              <h3 className="font-bold text-white text-3xl md:text-[32px] mb-2 leading-tight tracking-tight">{t.waitlist.card2.title}</h3>
+              <p className="text-white/80 text-[11px] font-medium leading-relaxed max-w-sm">{t.waitlist.card2.description}</p>
             </div>
             <div className="w-full aspect-[4/3] mt-6 overflow-hidden rounded-[1.5rem] shadow-2xl bg-white/5">
               <img src="/03/image 38.png" className="w-full h-full object-cover object-center" alt="Real person reading" />
@@ -81,10 +81,10 @@ const Waitlist = () => {
           <div className="flex-shrink-0 z-10 mb-2">
             <div className="flex items-center gap-2 mb-2">
               <div className="w-4 h-4 bg-white rounded-sm"></div>
-              <span className="text-[10px] font-bold text-white uppercase tracking-wider">{t.waitlist.card3Badge}</span>
+              <span className="text-[10px] font-bold text-white uppercase tracking-wider">{t.waitlist.card3.badge}</span>
             </div>
-            <h3 className="font-bold text-white text-3xl md:text-[40px] mb-2 leading-tight tracking-tight">{t.waitlist.card3Title}</h3>
-            <p className="text-white/80 text-[11px] font-medium leading-relaxed max-w-xl">{t.waitlist.card3Desc}</p>
+            <h3 className="font-bold text-white text-3xl md:text-[40px] mb-2 leading-tight tracking-tight">{t.waitlist.card3.title}</h3>
+            <p className="text-white/80 text-[11px] font-medium leading-relaxed max-w-xl">{t.waitlist.card3.description}</p>
           </div>
           <div className="w-full mt-10 overflow-hidden rounded-[2.5rem] shadow-2xl bg-white/5">
             <img src="/03/image 42.png" className="w-full h-auto" alt="Special perk" />
@@ -95,15 +95,15 @@ const Waitlist = () => {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div {...fadeInUp}>
             <p className="text-zinc-600 dark:text-zinc-400 text-xl md:text-3xl font-bold leading-tight mb-12">
-              {t.waitlist.thanks} <br />
-              {t.waitlist.notForEveryone}
+              {t.waitlist.footer.thanks} <br />
+              {t.waitlist.footer.notForEveryone}
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-10 py-5 bg-gradient-to-r from-[#FFBD7E] to-[#FB923C] dark:from-[#D97706] dark:to-[#B45309] text-white rounded-2xl font-black text-xl shadow-2xl shadow-orange-500/20 transition-all duration-300 transform"
             >
-              {t.hero.cta}
+              {t.waitlist.footer.cta}
             </motion.button>
           </motion.div>
         </div>

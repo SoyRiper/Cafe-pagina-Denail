@@ -27,8 +27,7 @@ const Hero = () => {
                {/* Text Content */}
                <div className="relative z-10 max-w-4xl mx-auto text-center mb-12 md:mb-16 px-4">
                   <motion.h1 {...fadeInUp} transition={{ ...fadeInUp.transition, delay: 0.1 }} className="heading-massive text-black dark:text-white mb-8 tracking-tighter leading-[0.9]">
-                     {t.hero.title1} <br />
-                     {t.hero.title2}
+                     {t.hero.title}
                   </motion.h1>
                   <motion.p
                      initial={{ opacity: 0, y: 20 }}

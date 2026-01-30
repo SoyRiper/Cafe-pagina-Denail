@@ -30,7 +30,7 @@ const Hiring = () => {
                     {...fadeInUp}
                     className="btn-main bg-black dark:bg-white text-white dark:text-black hover:scale-105 active:scale-95 px-12 transition-all"
                 >
-                    Explore Jobs
+                    {t.hiring.cta}
                 </motion.button>
             </div>
         </section>

@@ -17,14 +17,14 @@ const Vision = () => {
       <div className="max-w-7xl mx-auto mb-32 md:mb-48">
         <div className="text-center mb-16 md:mb-24">
           <motion.h2 {...fadeInUp} className="heading-impact mb-6 text-black dark:text-white">
-            {t.vision.titleMain}
+            {t.vision.builtOnPurpose.title}
           </motion.h2>
           <motion.p
             {...fadeInUp}
             transition={{ ...fadeInUp.transition, delay: 0.1 }}
             className="subheading-custom text-zinc-500 dark:text-zinc-400 max-w-2xl mx-auto"
           >
-            {t.vision.subtitleMain}
+            {t.vision.builtOnPurpose.subtitle}
           </motion.p>
         </div>
 
@@ -37,10 +37,10 @@ const Vision = () => {
             <div className="flex-shrink-0 z-10 mb-2">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-4 h-4 bg-white rounded-sm"></div>
-                <span className="text-[10px] font-bold text-white uppercase tracking-wider">{t.vision.badge1}</span>
+                <span className="text-[10px] font-bold text-white uppercase tracking-wider">{t.vision.builtOnPurpose.cards[0].badge}</span>
               </div>
-              <h3 className="font-semibold text-white text-3xl md:text-[32px] mb-1 leading-tight tracking-tight">{t.vision.title1}</h3>
-              <p className="text-white/90 text-[11px] font-medium leading-relaxed max-w-sm">{t.vision.desc1}</p>
+              <h3 className="font-semibold text-white text-3xl md:text-[32px] mb-1 leading-tight tracking-tight">{t.vision.builtOnPurpose.cards[0].title}</h3>
+              <p className="text-white/90 text-[11px] font-medium leading-relaxed max-w-sm">{t.vision.builtOnPurpose.cards[0].description}</p>
             </div>
             <div className="w-full aspect-[4/3] mt-6 overflow-hidden rounded-[1.5rem] shadow-2xl bg-white/5">
               <img src="/02/image 25.png" className="w-full h-full object-cover object-center" alt="Morning Desk Setup" />
@@ -56,10 +56,10 @@ const Vision = () => {
             <div className="flex-shrink-0 z-10 mb-2">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-4 h-4 bg-white rounded-sm"></div>
-                <span className="text-[10px] font-bold text-white uppercase tracking-wider">{t.vision.badge2}</span>
+                <span className="text-[10px] font-bold text-white uppercase tracking-wider">{t.vision.builtOnPurpose.cards[1].badge}</span>
               </div>
-              <h3 className="font-semibold text-white text-3xl md:text-[32px] mb-1 leading-tight tracking-tight">{t.vision.title2}</h3>
-              <p className="text-white/90 text-[11px] font-medium leading-relaxed max-w-sm">{t.vision.desc2}</p>
+              <h3 className="font-semibold text-white text-3xl md:text-[32px] mb-1 leading-tight tracking-tight">{t.vision.builtOnPurpose.cards[1].title}</h3>
+              <p className="text-white/90 text-[11px] font-medium leading-relaxed max-w-sm">{t.vision.builtOnPurpose.cards[1].description}</p>
             </div>
             <div className="w-full aspect-[4/3] mt-6 overflow-hidden rounded-[1.5rem] shadow-2xl bg-white/5">
               <img src="/02/image 24.png" className="w-full h-full object-cover object-center" alt="Office Reflection" />
@@ -74,10 +74,10 @@ const Vision = () => {
             <div className="flex-shrink-0 z-10 mb-2">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-4 h-4 bg-white rounded-sm"></div>
-                <span className="text-[10px] font-bold text-white uppercase tracking-wider">{t.vision.badge3}</span>
+                <span className="text-[10px] font-bold text-white uppercase tracking-wider">{t.vision.builtOnPurpose.cards[2].badge}</span>
               </div>
-              <h3 className="font-bold text-white text-3xl md:text-[40px] mb-2 leading-tight tracking-tight">{t.vision.title3}</h3>
-              <p className="text-white/90 text-sm font-medium leading-relaxed max-w-2xl">{t.vision.desc3}</p>
+              <h3 className="font-bold text-white text-3xl md:text-[40px] mb-2 leading-tight tracking-tight">{t.vision.builtOnPurpose.cards[2].title}</h3>
+              <p className="text-white/90 text-sm font-medium leading-relaxed max-w-2xl">{t.vision.builtOnPurpose.cards[2].description}</p>
             </div>
             <div className="w-full aspect-[21/9] mt-8 overflow-hidden rounded-[2.5rem] shadow-2xl bg-white/5">
               <img src="/02/image 23.png" className="w-full h-full object-cover object-center" alt="Wellness Assistant" />
@@ -92,10 +92,10 @@ const Vision = () => {
             <div className="flex-shrink-0 z-10 mb-2">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-4 h-4 bg-white rounded-sm"></div>
-                <span className="text-[10px] font-bold text-white uppercase tracking-wider">{t.vision.badge4}</span>
+                <span className="text-[10px] font-bold text-white uppercase tracking-wider">{t.vision.builtOnPurpose.cards[3].badge}</span>
               </div>
-              <h3 className="font-semibold text-white text-3xl md:text-[32px] mb-1 leading-tight tracking-tight">{t.vision.title4}</h3>
-              <p className="text-white/90 text-[11px] font-medium leading-relaxed max-w-sm">{t.vision.desc4}</p>
+              <h3 className="font-semibold text-white text-3xl md:text-[32px] mb-1 leading-tight tracking-tight">{t.vision.builtOnPurpose.cards[3].title}</h3>
+              <p className="text-white/90 text-[11px] font-medium leading-relaxed max-w-sm">{t.vision.builtOnPurpose.cards[3].description}</p>
             </div>
             <div className="w-full aspect-[4/3] mt-6 overflow-hidden rounded-[1.5rem] shadow-2xl bg-white/5">
               <img src="/02/image 27.png" className="w-full h-full object-cover object-center" alt="Coworking space" />
@@ -110,10 +110,10 @@ const Vision = () => {
             <div className="flex-shrink-0 z-10 mb-2">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-4 h-4 bg-white rounded-sm"></div>
-                <span className="text-[10px] font-bold text-white uppercase tracking-wider">Mood-based Brewing</span>
+                <span className="text-[10px] font-bold text-white uppercase tracking-wider">{t.vision.builtOnPurpose.cards[4].badge}</span>
               </div>
-              <h3 className="font-semibold text-white text-3xl md:text-[32px] mb-1 leading-tight tracking-tight">Coffee that gets you</h3>
-              <p className="text-white/90 text-[11px] font-medium leading-relaxed max-w-sm">Denail adapts every brew to your state of mind to keep you grounded, sharp or calm. Whatever your day needs.</p>
+              <h3 className="font-semibold text-white text-3xl md:text-[32px] mb-1 leading-tight tracking-tight">{t.vision.builtOnPurpose.cards[4].title}</h3>
+              <p className="text-white/90 text-[11px] font-medium leading-relaxed max-w-sm">{t.vision.builtOnPurpose.cards[4].description}</p>
             </div>
             <div className="w-full aspect-[4/3] mt-6 overflow-hidden rounded-[1.5rem] shadow-2xl bg-white/5">
               <img src="/02/image 26.png" className="w-full h-full object-cover object-center" alt="Cup of coffee" />
@@ -126,14 +126,14 @@ const Vision = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 md:mb-24">
           <motion.h2 {...fadeInUp} className="heading-impact mb-6 text-black dark:text-white">
-            More Than a Machine
+            {t.vision.moreThanMachine.title}
           </motion.h2>
           <motion.p
             {...fadeInUp}
             transition={{ ...fadeInUp.transition, delay: 0.1 }}
             className="subheading-custom text-zinc-500 dark:text-zinc-400 max-w-2xl mx-auto"
           >
-            Denail doesn't just brew coffee; it curates clarity and scale in mind. An obstacle, resonate just another way to be living.
+            {t.vision.moreThanMachine.subtitle}
           </motion.p>
         </div>
 
@@ -146,10 +146,10 @@ const Vision = () => {
             <div className="flex-shrink-0 z-10 mb-2">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-4 h-4 bg-white rounded-sm"></div>
-                <span className="text-[10px] font-bold text-white uppercase tracking-wider">Sustainability</span>
+                <span className="text-[10px] font-bold text-white uppercase tracking-wider">{t.vision.moreThanMachine.cards[0].badge}</span>
               </div>
-              <h3 className="font-semibold text-white text-3xl md:text-[32px] mb-1 leading-tight tracking-tight">Good for you. <br />Better for the planet.</h3>
-              <p className="text-white/90 text-[11px] font-medium leading-relaxed max-w-sm">Built with modular parts and 100% recyclable materials. Because great coffee shouldn't cost the Earth.</p>
+              <h3 className="font-semibold text-white text-3xl md:text-[32px] mb-1 leading-tight tracking-tight">{t.vision.moreThanMachine.cards[0].title}</h3>
+              <p className="text-white/90 text-[11px] font-medium leading-relaxed max-w-sm">{t.vision.moreThanMachine.cards[0].description}</p>
             </div>
             <div className="w-full aspect-[4/3] mt-6 overflow-hidden rounded-[1.5rem] shadow-2xl bg-white/5">
               <img src="/02/image 29.png" className="w-full h-full object-cover object-center" alt="Sustainable coffee" />
@@ -164,10 +164,10 @@ const Vision = () => {
             <div className="flex-shrink-0 z-10 mb-2">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-4 h-4 bg-white rounded-sm"></div>
-                <span className="text-[10px] font-bold text-white uppercase tracking-wider">Transparency</span>
+                <span className="text-[10px] font-bold text-white uppercase tracking-wider">{t.vision.moreThanMachine.cards[1].badge}</span>
               </div>
-              <h3 className="font-semibold text-white text-3xl md:text-[32px] mb-1 leading-tight tracking-tight">We share the process</h3>
-              <p className="text-white/90 text-[11px] font-medium leading-relaxed max-w-sm">From bean sourcing to algorithm updates, we believe in radical transparency at every step.</p>
+              <h3 className="font-semibold text-white text-3xl md:text-[32px] mb-1 leading-tight tracking-tight">{t.vision.moreThanMachine.cards[1].title}</h3>
+              <p className="text-white/90 text-[11px] font-medium leading-relaxed max-w-sm">{t.vision.moreThanMachine.cards[1].description}</p>
             </div>
             <div className="w-full aspect-[4/3] mt-6 overflow-hidden rounded-[1.5rem] shadow-2xl bg-white/5">
               <img src="/02/image 28.png" className="w-full h-full object-cover object-center" alt="Coffee process" />
@@ -181,10 +181,10 @@ const Vision = () => {
             <div className="flex-shrink-0 z-10 mb-2">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-4 h-4 bg-white rounded-sm"></div>
-                <span className="text-[10px] font-bold text-white uppercase tracking-wider">Human-First Tecnology</span>
+                <span className="text-[10px] font-bold text-white uppercase tracking-wider">{t.vision.moreThanMachine.cards[2].badge}</span>
               </div>
-              <h3 className="font-bold text-white text-3xl md:text-[40px] mb-2 leading-tight tracking-tight">Tech that gets out of the way</h3>
-              <p className="text-white/90 text-sm font-medium leading-relaxed max-w-2xl">Designed to serve you, not distract you. Denail blends into your life, not your attention span.</p>
+              <h3 className="font-bold text-white text-3xl md:text-[40px] mb-2 leading-tight tracking-tight">{t.vision.moreThanMachine.cards[2].title}</h3>
+              <p className="text-white/90 text-sm font-medium leading-relaxed max-w-2xl">{t.vision.moreThanMachine.cards[2].description}</p>
             </div>
             <div className="w-full aspect-[21/9] mt-8 overflow-hidden rounded-[2.5rem] shadow-2xl bg-white/5">
               <img src="/02/banner_1000x250_barista_machine 1.png" className="w-full h-full object-cover object-center" alt="Barista machine" />
@@ -198,10 +198,10 @@ const Vision = () => {
             <div className="flex-shrink-0 z-10 mb-2">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-4 h-4 bg-white rounded-sm"></div>
-                <span className="text-[10px] font-bold text-white uppercase tracking-wider">Lifestyle</span>
+                <span className="text-[10px] font-bold text-white uppercase tracking-wider">{t.vision.moreThanMachine.cards[3].badge}</span>
               </div>
-              <h3 className="font-semibold text-white text-3xl md:text-[32px] mb-1 leading-tight tracking-tight">Balance is not a luxury</h3>
-              <p className="text-white/90 text-[11px] font-medium leading-relaxed max-w-sm">It's a necessity. We design our technology to reclaim your time and focus.</p>
+              <h3 className="font-semibold text-white text-3xl md:text-[32px] mb-1 leading-tight tracking-tight">{t.vision.moreThanMachine.cards[3].title}</h3>
+              <p className="text-white/90 text-[11px] font-medium leading-relaxed max-w-sm">{t.vision.moreThanMachine.cards[3].description}</p>
             </div>
             <div className="w-full aspect-[4/3] mt-6 overflow-hidden rounded-[1.5rem] shadow-2xl bg-white/5">
               <img src="/02/image 33.png" className="w-full h-full object-cover object-center" alt="Balanced life" />
@@ -216,10 +216,10 @@ const Vision = () => {
             <div className="flex-shrink-0 z-10 mb-2">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-4 h-4 bg-white rounded-sm"></div>
-                <span className="text-[10px] font-bold text-white uppercase tracking-wider">Precision Engineering</span>
+                <span className="text-[10px] font-bold text-white uppercase tracking-wider">{t.vision.moreThanMachine.cards[4].badge}</span>
               </div>
-              <h3 className="font-semibold text-white text-3xl md:text-[32px] mb-1 leading-tight tracking-tight">It works like magic. <br />It's built on logic.</h3>
-              <p className="text-white/90 text-[11px] font-medium leading-relaxed max-w-sm">Every mechanical movement is optimized for health and silence.</p>
+              <h3 className="font-semibold text-white text-3xl md:text-[32px] mb-1 leading-tight tracking-tight">{t.vision.moreThanMachine.cards[4].title}</h3>
+              <p className="text-white/90 text-[11px] font-medium leading-relaxed max-w-sm">{t.vision.moreThanMachine.cards[4].description}</p>
             </div>
             <div className="w-full aspect-[4/3] mt-6 overflow-hidden rounded-[1.5rem] shadow-2xl bg-white/5">
               <img src="/02/image 34.png" className="w-full h-full object-cover object-center" alt="Engineering" />
@@ -235,14 +235,14 @@ const Vision = () => {
           className="flex flex-col items-center"
         >
           <h2 className="text-[2.5rem] md:text-[5.5rem] font-semibold text-black dark:text-white mb-6 tracking-tighter leading-[1.1] transition-colors">
-            Thanks for getting this far
+            {t.vision.moreThanMachine.footer.title}
           </h2>
           <div className="max-w-4xl mx-auto mb-10">
             <p className="text-zinc-500 dark:text-zinc-400 text-lg md:text-2xl font-medium leading-snug">
-              Denail is crafted with honesty, clarity, and a public mindset. No shortcuts, no secrets just a better way to do things.
+              {t.vision.moreThanMachine.footer.text1}
             </p>
             <p className="text-zinc-500 dark:text-zinc-400 text-lg md:text-2xl font-medium leading-snug">
-              We'd love your perspective and we've got a small gift waiting for you when you finish our short questionnaire
+              {t.vision.moreThanMachine.footer.text2}
             </p>
           </div>
           <div className="mb-10 text-4xl">🧡</div>
@@ -251,7 +251,7 @@ const Vision = () => {
             whileTap={{ scale: 0.98 }}
             className="px-10 py-5 bg-black dark:bg-white text-white dark:text-black rounded-2xl font-bold text-xl shadow-2xl transition-all duration-300 transform"
           >
-            Help us validate
+            {t.vision.moreThanMachine.footer.cta}
           </motion.button>
         </motion.div>
       </div>

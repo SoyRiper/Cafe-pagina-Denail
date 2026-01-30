@@ -8,8 +8,6 @@ const fadeInUp = {
     transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] }
 };
 
-
-
 const CoffeeTaste = () => {
     const { t } = useLanguage();
     return (
@@ -23,7 +21,7 @@ const CoffeeTaste = () => {
                     transition={{ ...fadeInUp.transition, delay: 0.1 }}
                     className="subheading-custom text-zinc-500 dark:text-zinc-400 max-w-2xl"
                 >
-                    {t.coffeeTaste.subtitle} Let the AI brew the perfect cup with a single tap.
+                    {t.coffeeTaste.subtitle}
                 </motion.p>
             </div>
 

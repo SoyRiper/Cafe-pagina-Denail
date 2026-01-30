@@ -9,86 +9,118 @@ export const es = {
         logout: "Cerrar sesión",
     },
     hero: {
-        badge: "El futuro está aquí",
-        title1: "La Máquina de",
-        title2: "Café AI",
-        subtitle: "Denail es la primera cafetera impulsada por IA que aprende de ti. No es solo café, es gestión de energía personal.",
+        title: "La Máquina de Café de IA",
+        subtitle: "Nuestra misión es fomentar tu creatividad a través del diseño y construir el centro para la era del rendimiento.",
         cta: "Únete a la lista de espera",
-        secondaryCta: "Mírala en acción",
     },
-    vision: {
-        badge1: "Tu energía, optimizada por IA",
-        title1: "La mañana que siempre quisiste",
-        desc1: "Tu café se encarga de sí mismo para que tú te encargues de lo que importa.",
-        badge2: "Asistente Silencioso",
-        title2: "No lo ves. Pero está funcionando.",
-        desc2: "Denail maneja la complejidad —curvas de temperatura, tipos de grano, perfiles de preparación— mientras tú manejas la vida.",
-        badge3: "Algoritmo de Bienestar",
-        title3: "Menos Estrés. Más Enfoque. Más Salud",
-        desc3: "Cada taza ayuda a regular tu energía. Sin picos ni caídas, solo un flujo constante para que realmente disfrutes tu día.",
-        badge4: "Micro-victorias, diarias",
-        title4: "Bienestar integrado en tu descanso",
-        desc4: "Cada taza te da un pequeño empujón hacia el equilibrio, la salud y la claridad. Sin ni siquiera intentarlo.",
-        titleMain: "Construido con Propósito",
-        subtitleMain: "Explora la visión liderada por Denail, donde cada detalle está diseñado para tu forma de enfocarte, construir y simplemente vivir.",
+    smartCoffee: {
+        title: "Café inteligente, rutina simple",
+        subtitle: "Olvídate de elegir café. Yo elegiré y prepararé lo mejor para tu filtro, tu energía y tu rutina.",
     },
-    features: {
-        title: "Inteligencia en cada grano",
-        subtitle: "Descubre cómo la IA transforma tu rutina diaria en una experiencia optimizada para el rendimiento.",
+    phoneMockups: {
+        title: "Todo desde tu teléfono",
+        subtitle: "Programa tu bienestar, ajusta preferencias, inicia una preparación desde cualquier lugar y obtén análisis en tiempo real.",
+    },
+    coffeeTaste: {
+        title: "Conoce tu gusto por el café",
+        subtitle: "Nuestro algoritmo de café sabe lo que te gusta, energía y sabores, así que preparará la manera perfecta con solo un toque.",
+    },
+    fuelFlow: {
+        title: "Alimenta tu flujo con café inteligente",
+        subtitle: "Nuestra máquina básica pero mejorada para ti. Construida para estar en el mejor estado real y nuestro comienzo.",
         items: [
             {
-                title: "Preparación Adaptativa",
-                description: "Denail aprende tu horario y prepara tu taza perfecta exactamente cuando la necesitas."
+                title: "Inteligencia de Frontera",
+                description: "Nuestro sistema básico pero mejorado con las mismas características que el estándar."
             },
             {
-                title: "Análisis de Ánimo",
-                description: "Los sensores detectan tus niveles de energía para ajustar la cafeína y la intensidad automáticamente."
+                title: "Minimalismo",
+                description: "Diseño bien equilibrado que encaja fácilmente en cualquier hogar minimalista."
             },
             {
-                title: "Sostenibilidad Primero",
-                description: "Sistema de cápsulas de residuo cero y calentamiento eficiente para una mañana más verde."
-            },
-            {
-                title: "Sincronización en la Nube",
-                description: "Accede a tus preferencias desde cualquier máquina Denail en el mundo al instante."
+                title: "Sostenible",
+                description: "La parte de la máquina hecha con productos reciclados de té de alta calidad."
             }
         ]
     },
+    buildFuture: {
+        title: "Construye el futuro del café con nosotros",
+        cta: "Responde unas pocas preguntas"
+    },
+    metrics: {
+        title: "Métricas de despertar",
+        subtitle: "Rastrea y analiza cómo nuestras máquinas rinden con el café y enfocan tus resultados.",
+        cta: "Ayúdanos a obtener más datos",
+        stats: [
+            { label: "No lo suficientemente energizante", sub: "Cómo nuestro café mejora tu enfoque en métricas en tiempo real.", val: "61%" },
+            { label: "Rompe-enfoque", sub: "Nuestro sistema rastrea y optimiza resultados con café.", val: "70%" },
+            { label: "Elecciones de café incorrectas", sub: "Mientras optimizamos mejoramos para evitar un error de café.", val: "+90%" }
+        ]
+    },
+    hiring: {
+        title: "¡Estamos empezando y contratando!",
+        subtitle: "Descubre si roles técnicos o no técnicos pueden encontrar el trabajo para ayudar a construir el futuro dentro de Denail.",
+        cta: "Vamos a construirlo"
+    },
+    vision: {
+        builtOnPurpose: {
+            title: "Construido con Propósito",
+            subtitle: "Explora la visión liderada por Denail, donde cada detalle está diseñado para cómo te enfocas, construyes y simplemente la forma de estar viviendo.",
+            cards: [
+                { badge: "Tecnología que te escucha", title: "La mañana que siempre quisiste", description: "Tu café se cuida solo para que tú cuides lo que importa." },
+                { badge: "Caja Negra", title: "No lo ves. Pero está funcionando.", description: "Denail maneja la complejidad: curvas de temperatura, tipos de grano, perfiles de preparación mientras tú manejas la vida." },
+                { badge: "Algoritmo de Bienestar", title: "Menos Estrés. Más Enfoque. Más Salud.", description: "Cada taza ayuda a regular tu energía. Sin picos, sin caídas, solo flujo constante para que realmente disfrutes tu día." },
+                { badge: "El equilibrio es diario", title: "Bienestar incorporado en tu descanso", description: "Cada taza te da un pequeño empujón hacia el equilibrio, la salud y la claridad. Sin siquiera intentarlo." },
+                { badge: "Batería personalizada", title: "Café que te entiende", description: "Denail adapta cada preparación a tu estado mental para mantenerte centrado, agudo o tranquilo. Lo que tu día necesite." }
+            ]
+        },
+        moreThanMachine: {
+            title: "Más que una máquina",
+            subtitle: "Denail es más que solo belleza, componentes vidriosos y sólidos. Una idea para reconectar y encontrar una mejor manera de hacer las cosas.",
+            cards: [
+                { badge: "Sostenibilidad en el Corazón", title: "Bueno para ti. Mejor para el planeta.", description: "Construido con partes modulares y materiales 100% reciclables. Porque un gran café no debería costar la Tierra." },
+                { badge: "Lado a Lado", title: "Compartimos el proceso", description: "Desde el origen del grano hasta las actualizaciones del algoritmo, creemos en la transparencia radical en cada paso." },
+                { badge: "Tecnología Primero Humana", title: "Tecnología que se aparta del camino", description: "Diseñado para servirte, no para distraerte. Denail se mezcla en tu vida, no en tu capacidad de atención." },
+                { badge: "No más eficiencia", title: "El equilibrio no es un lujo", description: "Es una necesidad. Diseñamos nuestra tecnología para reclamar tu tiempo y enfoque." },
+                { badge: "Entrega de Consistencia", title: "Funciona como magia. Está construido sobre lógica.", description: "Cada movimiento mecánico está optimizado para la salud y el silencio." }
+            ],
+            footer: {
+                title: "Gracias por llegar hasta aquí",
+                text1: "Denail está elaborado con honestidad, claridad y una mentalidad pública. Sin atajos, sin secretos, solo una mejor manera de hacer las cosas.",
+                text2: "Nos encantaría tu perspectiva y tenemos un pequeño regalo esperándote cuando termines nuestro breve cuestionario",
+                cta: "Ayúdanos a validar"
+            }
+        }
+    },
     waitlist: {
         title: "La Lista de Espera, Pero No para Todos",
-        description: "Estamos construyendo algo exclusivo. Únete a la cola de acceso prioritario para ser de los primeros en vivir la revolución.",
-        placeholder: "Tu dirección de correo",
-        cta: "Unirme ahora",
-        success: "¡Estás dentro! Revisa tu correo.",
-        card1Badge: "Empieza con unas preguntas rápidas",
-        card1Title: "Veamos si estamos hechos el uno para el otro",
-        card1Desc: "Responde unas pocas preguntas para saber si Denail encaja con tu estilo de vida. Sin rellenos, solo lo importante.",
-        card2Badge: "Sin algoritmos. Solo personas reales leyendo.",
-        card2Title: "Sin algoritmos. Solo personas reales leyendo.",
-        card2Desc: "Cada respuesta es revisada por alguien de nuestro equipo porque construir algo significativo empieza escuchando.",
-        card3Badge: "Si encajamos, estás dentro y más",
-        card3Title: "Acceso anticipado (y algo extra)",
-        card3Desc: "Si tus respuestas se alinean con lo que estamos construyendo, te añadiremos a la lista y te enviaremos una sorpresa.",
-        thanks: "Gracias por considerar Denail.",
-        notForEveryone: "No somos para todos y ese es precisamente el punto.",
+        description: "Estamos construyendo algo para personas que realmente lo entienden. Si te gusta el café, la tecnología y las ideas que mejoran tu día, podrías pertenecer aquí.",
+        card1: { badge: "Empieza con unas preguntas rápidas", title: "Veamos si estamos hechos el uno para el otro", description: "Responde un breve conjunto de preguntas para que podamos entender si Denail encaja con tu estilo de vida y mentalidad. Sin relleno, solo señal." },
+        card2: { badge: "Revisamos cada respuesta manualmente", title: "Sin algoritmos. Solo personas reales leyendo.", description: "Cada respuesta es revisada por alguien de nuestro equipo porque construir algo significativo comienza escuchando." },
+        card3: { badge: "Si es una coincidencia, estás dentro y más", title: "Obtén acceso temprano (y algo extra)", description: "Si tus respuestas se alinean con lo que estamos construyendo, te añadiremos a la lista de espera y te enviaremos una sorpresa como agradecimiento." },
+        footer: {
+            thanks: "Gracias por considerar Denail.",
+            notForEveryone: "No somos para todos y ese es exactamente el punto.",
+            cta: "Únete a la Lista de Espera"
+        }
     },
     collaborate: {
         title: "Construyámoslo Juntos",
-        headerDescription: "Estamos buscando activamente colaboradores visionarios, co-fundadores y asesores que crean en lo que estamos creando.",
+        description: "Estamos buscando activamente colaboradores visionarios, co-fundadores y asesores que crean en lo que estamos creando.",
         advisors: {
-            tag: "Advisores",
+            badge: "Asesores",
             title: "Guiar. Desafiar. Acelerar.",
             description: "Buscamos voces experimentadas que nos ayuden a refinar nuestra dirección y pensar de forma más inteligente. Sin compromiso a tiempo completo, solo aportes estratégicos y orientación honesta.",
             cta: "Aplicar como Asesor"
         },
         founders: {
-            tag: "Para constructores que ven lo invisible",
+            badge: "Para constructores que ven lo invisible",
             title: "Construye lo que otros solo imaginan",
             description: "Buscamos un cofundador técnico para liderar el desarrollo de hardware. Sin salario inicial, solo capital, visión compartida y la oportunidad de traer algo significativo al mundo.",
             cta: "Aplicar como Cofundador"
         },
         hiring: {
-            tag: "Contratación",
+            badge: "Contratación",
             title: "Mantengamos la puerta abierta",
             description: "No estamos contratando ahora mismo, pero si conectas con nuestra visión, envíanos tu portafolio y lo guardaremos para futuros roles.",
             cta: "Comparte tu portafolio"
@@ -133,31 +165,5 @@ export const es = {
             company: ["Sobre nosotros", "Equipo", "Carreras", "Contacto"],
             legal: ["Términos y condiciones", "Política de privacidad", "Política de cookies", "Datos y Seguridad"]
         }
-    },
-    smartCoffee: {
-        title: "Café inteligente, rutina simple",
-        subtitle: "Solo di 'Oye Denail' o toca tu teléfono. Tu mañana, simplificada.",
-    },
-    coffeeTaste: {
-        title: "Conoce tu gusto por el café",
-        subtitle: "Más allá de suave o fuerte. Denail entiende notas sutiles, niveles de acidez y preferencias de cuerpo.",
-    },
-    hiring: {
-        title: "¡Estamos empezando y contratando!",
-        subtitle: "Únete al equipo que está redefiniendo la bebida más importante del mundo.",
-    },
-    metrics: {
-        title: "Métricas de despertar",
-        subtitle: "Estadísticas de nuestro cuestionario en vivo e información real de usuarios.",
-        cta: "Ayúdanos a obtener más datos",
-        stats: [
-            { label: "Sin rastro de energía", sub: "El 61% dice que su café casero no les da el impulso que esperan." },
-            { label: "Interrupción del flujo", sub: "El 70% interrumpe el trabajo profundo solo para hacer café." },
-            { label: "Decisiones erróneas", sub: "Más del 90% no sabe qué tipo de café se adapta a su energía." }
-        ]
-    },
-    phoneMockups: {
-        title: "Todo desde tu teléfono",
-        subtitle: "Programa tus cafés, ajusta preferencias, inicia una preparación desde cualquier lugar y recibe actualizaciones en tiempo real.",
     }
 };

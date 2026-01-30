@@ -12,9 +12,9 @@ const fadeInUp = {
 const Metrics = () => {
     const { t } = useLanguage();
     const stats = [
-        { label: t.metrics.stats[0].label, sub: t.metrics.stats[0].sub, val: "61%" },
-        { label: t.metrics.stats[1].label, sub: t.metrics.stats[1].sub, val: "70%" },
-        { label: t.metrics.stats[2].label, sub: t.metrics.stats[2].sub, val: "+90%" }
+        { label: t.metrics.stats[0].label, sub: t.metrics.stats[0].sub, val: t.metrics.stats[0].val },
+        { label: t.metrics.stats[1].label, sub: t.metrics.stats[1].sub, val: t.metrics.stats[1].val },
+        { label: t.metrics.stats[2].label, sub: t.metrics.stats[2].sub, val: t.metrics.stats[2].val }
     ];
 
     return (
