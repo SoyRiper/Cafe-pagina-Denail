@@ -18,17 +18,20 @@ const Features = () => {
         {
             title: t.fuelFlow.items[0].title,
             description: t.fuelFlow.items[0].description,
-            img: "/01/image 6.png"
+            imgLight: "/01/image 6.png",
+            imgDark: "/01/triangle_dark.png"
         },
         {
             title: t.fuelFlow.items[1].title,
             description: t.fuelFlow.items[1].description,
-            img: "/01/image 5.png"
+            imgLight: "/01/image 5.png",
+            imgDark: "/01/platform_dark.png"
         },
         {
             title: t.fuelFlow.items[2].title,
             description: t.fuelFlow.items[2].description,
-            img: "/01/image 7.png"
+            imgLight: "/01/image 7.png",
+            imgDark: "/01/image 7.png"
         }
     ];
 
@@ -92,15 +95,58 @@ const Features = () => {
                                     <p className="text-zinc-500 font-medium text-base md:text-lg leading-relaxed">{feature.description}</p>
                                 </div>
 
-                                <div className="flex-1 flex items-center justify-center">
-                                    <div className="w-full max-w-[280px] aspect-square rounded-2xl flex items-center justify-center overflow-hidden transition-all duration-500">
+                                <div className="flex-1 flex items-center justify-center relative select-none">
+                                    <div className="w-full max-w-[280px] aspect-square rounded-2xl flex items-center justify-center overflow-visible transition-all duration-500 relative">
+
+                                        {/* Light Mode: original images with mix-blend-multiply */}
                                         <motion.img
-                                            src={feature.img}
+                                            src={feature.imgLight}
                                             alt={feature.title}
-                                            className="w-full h-full object-contain mix-blend-multiply dark:mix-blend-screen transition-all duration-500"
+                                            className="w-full h-full object-contain absolute inset-0 dark:hidden mix-blend-multiply brightness-105 transition-opacity duration-300"
                                             whileHover={{ scale: 1.1 }}
                                             transition={{ type: "spring", stiffness: 300, damping: 20 }}
                                         />
+
+                                        {/* Dark Mode Implementation */}
+                                        {idx === 1 ? (
+                                            /* Improved CSS Platform for Minimalism Card in Dark Mode - matches mockup aesthetics */
+                                            <div className="hidden dark:flex items-center justify-center w-full h-full absolute inset-0 preserve-3d">
+                                                <div className="relative" style={{ perspective: '1000px' }}>
+                                                    <motion.div
+                                                        whileHover={{ scale: 1.1, translateY: -10 }}
+                                                        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                                                        className="relative"
+                                                    >
+                                                        {/* Floating Soft Glow (Orange) */}
+                                                        <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-8 bg-orange-500/30 blur-[25px] rounded-full" />
+
+                                                        {/* The Platform Body */}
+                                                        <div
+                                                            className="w-48 h-28 bg-gradient-to-br from-white via-zinc-50 to-zinc-100 rounded-[2rem] shadow-[0_20px_40px_-5px_rgba(0,0,0,0.4)]"
+                                                            style={{
+                                                                transform: "rotateX(55deg) rotateZ(-35deg)",
+                                                                transformStyle: "preserve-3d"
+                                                            }}
+                                                        >
+                                                            {/* Side depth / thickness */}
+                                                            <div
+                                                                className="absolute inset-0 rounded-[2rem] bg-zinc-200"
+                                                                style={{ transform: "translateZ(-8px)" }}
+                                                            />
+                                                        </div>
+                                                    </motion.div>
+                                                </div>
+                                            </div>
+                                        ) : (
+                                            /* Dark Mode: dark images with screen blend mode and optimized filters */
+                                            <motion.img
+                                                src={feature.imgDark}
+                                                alt={feature.title}
+                                                className={`w-full h-full object-contain absolute inset-0 hidden dark:block mix-blend-screen brightness-110 contrast-150 transition-opacity duration-300 ${idx === 2 ? 'invert hue-rotate-180 brightness-75' : ''}`}
+                                                whileHover={{ scale: 1.1 }}
+                                                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                                            />
+                                        )}
                                     </div>
                                 </div>
                             </motion.div>
