@@ -1,39 +1,38 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
 
 const fadeInUp = {
-    initial: { opacity: 0, y: 30 },
+    initial: { opacity: 0, y: 50 },
     whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true },
-    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+    viewport: { once: false, amount: 0.2 },
+    transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] }
 };
 
 const Hiring = () => {
+    const { t } = useLanguage();
     return (
-        <section className="py-24 px-6 bg-white dark:bg-zinc-950 border-t border-zinc-100 dark:border-zinc-900">
-            <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
-                <div className="max-w-2xl text-left">
-                    <motion.h3 {...fadeInUp} className="text-3xl md:text-4xl font-black mb-4">
-                        We are starting and hiring!
-                    </motion.h3>
+        <section className="py-24 px-6 bg-white dark:bg-black border-t border-zinc-100 dark:border-zinc-900 transition-colors duration-500">
+            <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+                <div className="max-w-2xl">
+                    <motion.h2 {...fadeInUp} className="heading-impact mb-4 text-black dark:text-white transition-colors">
+                        {t.hiring.title}
+                    </motion.h2>
                     <motion.p
                         {...fadeInUp}
                         transition={{ ...fadeInUp.transition, delay: 0.1 }}
-                        className="text-zinc-500 font-medium text-lg"
+                        className="text-zinc-500 dark:text-zinc-400 font-medium text-lg transition-colors"
                     >
-                        If you're an AI Developer or Hardware Engineer and want to get involved, we'd love to talk.
+                        {t.hiring.subtitle}
                     </motion.p>
                 </div>
                 <motion.button
                     {...fadeInUp}
-                    className="btn-main border-2 border-zinc-900 dark:border-zinc-100 hover:bg-zinc-900 hover:text-white dark:hover:bg-white dark:hover:text-black shrink-0"
+                    className="btn-main bg-black dark:bg-white text-white dark:text-black hover:scale-105 active:scale-95 px-12 transition-all"
                 >
-                    See open positions
+                    Explore Jobs
                 </motion.button>
             </div>
-
-            {/* Decorative Gradient Block */}
-
         </section>
     );
 };

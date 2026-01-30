@@ -1,16 +1,17 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
 
 const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
+  initial: { opacity: 0, y: 50 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
+  viewport: { once: false, amount: 0.2 },
+  transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] }
 };
 
 const Waitlist = () => {
+  const { t } = useLanguage();
   return (
-    <div className="w-full flex flex-col orange-mesh-bg min-h-screen">
+    <div className="w-full flex flex-col orange-mesh-bg dark:bg-black min-h-screen transition-colors duration-500">
       <section className="px-6 md:px-16 pt-24 md:pt-40 pb-32">
         {/* Header Section */}
         <div className="max-w-7xl mx-auto text-center mb-16 md:mb-24">
@@ -18,19 +19,19 @@ const Waitlist = () => {
             {...fadeInUp}
             className="text-4xl md:text-[5.5rem] font-bold text-black dark:text-white mb-8 tracking-tighter leading-[1.1]"
           >
-            The Waitlist, But Not for Everyone
+            {t.waitlist.title}
           </motion.h2>
           <motion.p
             {...fadeInUp}
             className="text-zinc-600 dark:text-zinc-400 text-lg md:text-2xl font-medium max-w-4xl mx-auto leading-tight mb-12"
           >
-            We’re building something for people who really get it. <br className="hidden md:block" /> If you’re into coffee, tech, and ideas that improve your day you might belong here.
+            {t.waitlist.description}
           </motion.p>
           <motion.button
             {...fadeInUp}
             className="px-8 py-4 bg-gradient-to-r from-[#FFBD7E] to-[#FB923C] text-white rounded-xl font-bold text-lg shadow-lg shadow-orange-500/20 hover:scale-105 transition-all duration-300"
           >
-            Join the Waitlist
+            {t.hero.cta}
           </motion.button>
         </div>
 
@@ -38,15 +39,15 @@ const Waitlist = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mb-10">
           <motion.div
             {...fadeInUp}
-            className="relative w-full rounded-[2.5rem] overflow-hidden bg-[#FFBD7E] p-8 pb-8 flex flex-col"
+            className="relative w-full rounded-[2.5rem] overflow-hidden bg-[#FFBD7E] dark:bg-black border border-transparent dark:border-zinc-800 p-8 pb-8 flex flex-col transition-all duration-500"
           >
             <div className="flex-shrink-0 z-10 mb-2">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-4 h-4 bg-white rounded-sm"></div>
-                <span className="text-[10px] font-bold text-white uppercase tracking-wider">Start with a few quick questions</span>
+                <span className="text-[10px] font-bold text-white uppercase tracking-wider">{t.waitlist.card1Badge}</span>
               </div>
-              <h3 className="font-bold text-white text-3xl md:text-[32px] mb-2 leading-tight tracking-tight">Let's see if we're made for each other</h3>
-              <p className="text-white/80 text-[11px] font-medium leading-relaxed max-w-sm">Answer a short set of questions so we can understand if Denail fits your lifestyle and mindset. No fluff, just signal.</p>
+              <h3 className="font-bold text-white text-3xl md:text-[32px] mb-2 leading-tight tracking-tight">{t.waitlist.card1Title}</h3>
+              <p className="text-white/80 text-[11px] font-medium leading-relaxed max-w-sm">{t.waitlist.card1Desc}</p>
             </div>
             <div className="w-full aspect-[4/3] mt-6 overflow-hidden rounded-[1.5rem] shadow-2xl bg-white/5">
               <img src="/03/image 35.png" className="w-full h-full object-cover object-center" alt="Coffee and gadgets" />
@@ -56,15 +57,15 @@ const Waitlist = () => {
           <motion.div
             {...fadeInUp}
             transition={{ ...fadeInUp.transition, delay: 0.1 }}
-            className="relative w-full rounded-[2.5rem] overflow-hidden bg-[#FB923C] p-8 pb-8 flex flex-col"
+            className="relative w-full rounded-[2.5rem] overflow-hidden bg-[#FB923C] dark:bg-black border border-transparent dark:border-zinc-800 p-8 pb-8 flex flex-col transition-all duration-500"
           >
             <div className="flex-shrink-0 z-10 mb-2">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-4 h-4 bg-white rounded-sm"></div>
-                <span className="text-[10px] font-bold text-white uppercase tracking-wider">We review each response manually</span>
+                <span className="text-[10px] font-bold text-white uppercase tracking-wider">{t.waitlist.card2Badge}</span>
               </div>
-              <h3 className="font-bold text-white text-3xl md:text-[32px] mb-2 leading-tight tracking-tight">No algorithms. Just real people reading.</h3>
-              <p className="text-white/80 text-[11px] font-medium leading-relaxed max-w-sm">Every answer is reviewed by someone on our team because building something meaningful starts with listening.</p>
+              <h3 className="font-bold text-white text-3xl md:text-[32px] mb-2 leading-tight tracking-tight">{t.waitlist.card2Title}</h3>
+              <p className="text-white/80 text-[11px] font-medium leading-relaxed max-w-sm">{t.waitlist.card2Desc}</p>
             </div>
             <div className="w-full aspect-[4/3] mt-6 overflow-hidden rounded-[1.5rem] shadow-2xl bg-white/5">
               <img src="/03/image 38.png" className="w-full h-full object-cover object-center" alt="Real person reading" />
@@ -75,15 +76,15 @@ const Waitlist = () => {
         {/* Row 2: Wide Card */}
         <motion.div
           {...fadeInUp}
-          className="max-w-7xl mx-auto relative w-full rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-[#FFBD7E] via-[#FB923C] to-[#F59E0B] p-8 md:p-12 pb-12 flex flex-col mb-32"
+          className="max-w-7xl mx-auto relative w-full rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-[#FFBD7E] via-[#FB923C] to-[#F59E0B] dark:from-zinc-900 dark:via-zinc-900 dark:to-black border border-transparent dark:border-zinc-800 p-8 md:p-12 pb-12 flex flex-col mb-32 transition-all duration-500"
         >
           <div className="flex-shrink-0 z-10 mb-2">
             <div className="flex items-center gap-2 mb-2">
               <div className="w-4 h-4 bg-white rounded-sm"></div>
-              <span className="text-[10px] font-bold text-white uppercase tracking-wider">If it's a match, you're in and more</span>
+              <span className="text-[10px] font-bold text-white uppercase tracking-wider">{t.waitlist.card3Badge}</span>
             </div>
-            <h3 className="font-bold text-white text-3xl md:text-[40px] mb-2 leading-tight tracking-tight">Get early access (and a little something extra)</h3>
-            <p className="text-white/80 text-[11px] font-medium leading-relaxed max-w-xl">If your answers align with what we're building, we'll add you to the waitlist and send you a surprise as a thank you.</p>
+            <h3 className="font-bold text-white text-3xl md:text-[40px] mb-2 leading-tight tracking-tight">{t.waitlist.card3Title}</h3>
+            <p className="text-white/80 text-[11px] font-medium leading-relaxed max-w-xl">{t.waitlist.card3Desc}</p>
           </div>
           <div className="w-full mt-10 overflow-hidden rounded-[2.5rem] shadow-2xl bg-white/5">
             <img src="/03/image 42.png" className="w-full h-auto" alt="Special perk" />
@@ -94,15 +95,15 @@ const Waitlist = () => {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div {...fadeInUp}>
             <p className="text-zinc-600 dark:text-zinc-400 text-xl md:text-3xl font-bold leading-tight mb-12">
-              Thanks for considering Denail. <br />
-              We're not for everyone and that's exactly the point.
+              {t.waitlist.thanks} <br />
+              {t.waitlist.notForEveryone}
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-10 py-5 bg-gradient-to-r from-[#FFBD7E] to-[#FB923C] text-white rounded-2xl font-black text-xl shadow-2xl shadow-orange-500/20 transition-all duration-300 transform"
+              className="px-10 py-5 bg-gradient-to-r from-[#FFBD7E] to-[#FB923C] dark:from-[#D97706] dark:to-[#B45309] text-white rounded-2xl font-black text-xl shadow-2xl shadow-orange-500/20 transition-all duration-300 transform"
             >
-              Join the Waitlist
+              {t.hero.cta}
             </motion.button>
           </motion.div>
         </div>

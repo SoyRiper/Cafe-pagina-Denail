@@ -1,5 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
 import SmartCoffee from './SmartCoffee';
 import PhoneMockups from './PhoneMockups';
 import CoffeeTaste from './CoffeeTaste';
@@ -9,37 +9,34 @@ import Metrics from './Metrics';
 import Hiring from './Hiring';
 
 const fadeInUp = {
-   initial: { opacity: 0, y: 30 },
+   initial: { opacity: 0, y: 50 },
    whileInView: { opacity: 1, y: 0 },
-   viewport: { once: true },
-   transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+   viewport: { once: false, amount: 0.2 },
+   transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] }
 };
 
 const Hero = () => {
+   const { t } = useLanguage();
    return (
-      <div className="w-full flex flex-col bg-white">
+      <div className="w-full flex flex-col bg-white dark:bg-black transition-colors duration-500">
 
          {/* 1. MASTER HERO SECTION (Contained Gradient Card) */}
-         <section className="w-full flex justify-center items-center px-4 md:px-6 pt-24 pb-12 bg-white">
-            <div className="relative w-full max-w-[1440px] hero-gradient rounded-[2.5rem] md:rounded-[4rem] flex flex-col justify-center items-center pt-20 md:pt-32 pb-0 md:pb-20 overflow-hidden shadow-2xl">
+         <section className="w-full flex justify-center items-center px-4 md:px-6 pt-24 pb-12 bg-white dark:bg-black transition-colors duration-500">
+            <div className="relative w-full max-w-[1440px] bg-white dark:bg-black rounded-[2.5rem] md:rounded-[4rem] flex flex-col justify-center items-center pt-20 md:pt-32 pb-0 md:pb-20 overflow-hidden transition-all duration-500">
 
                {/* Text Content */}
                <div className="relative z-10 max-w-4xl mx-auto text-center mb-12 md:mb-16 px-4">
-                  <motion.h1
-                     initial={{ opacity: 0, y: 40 }}
-                     animate={{ opacity: 1, y: 0 }}
-                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                     className="heading-massive text-white drop-shadow-sm mb-6"
-                  >
-                     The AI Coffee Machine
+                  <motion.h1 {...fadeInUp} transition={{ ...fadeInUp.transition, delay: 0.1 }} className="heading-massive text-black dark:text-white mb-8 tracking-tighter leading-[0.9]">
+                     {t.hero.title1} <br />
+                     {t.hero.title2}
                   </motion.h1>
                   <motion.p
                      initial={{ opacity: 0, y: 20 }}
                      animate={{ opacity: 1, y: 0 }}
                      transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                     className="text-white/90 text-sm md:text-lg font-bold max-w-2xl mx-auto leading-relaxed tracking-wide"
+                     className="text-white/90 text-sm md:text-lg font-medium max-w-2xl mx-auto leading-relaxed tracking-wide"
                   >
-                     Engineered to boost your productivity through deep AI insights, Denail is the coffee machine that truly gets you.
+                     {t.hero.subtitle}
                   </motion.p>
                </div>
 
