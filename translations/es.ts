@@ -45,7 +45,7 @@ export const es = {
     },
     buildFuture: {
         title: "Construye el futuro del café con nosotros",
-        cta: "Responde unas pocas preguntas"
+        cta: "Respond a Few Cuestions"
     },
     metrics: {
         title: "Métricas de despertar",
@@ -87,8 +87,8 @@ export const es = {
             footer: {
                 title: "Gracias por llegar hasta aquí",
                 text1: "Denail está elaborado con honestidad, claridad y una mentalidad pública. Sin atajos, sin secretos, solo una mejor manera de hacer las cosas.",
-                text2: "Nos encantaría tu perspectiva y tenemos un pequeño regalo esperándote cuando termines nuestro breve cuestionario",
-                cta: "Ayúdanos a validar"
+                text2: "Nos encantaría tu perspectiva y tenemos un pequeño regalo esperándote cuando termines nuestro breve cuestionario. Ayúdanos respondiendo estas preguntas.",
+                cta: "Respond a Few Cuestions"
             }
         }
     },
@@ -143,7 +143,7 @@ export const es = {
         investors: {
             tag: "Inversores y Socios",
             title: "Hablemos de oportunidades",
-            description: "Si eres un VC, business angel, o estás interesado en asociaciones estratégicas, esta es la bandeja que buscas: danilmahanst@gmail.com"
+            description: "Si eres un VC, business angel, o estás interesado en asociaciones estratégicas, esta es la bandeja que buscas: danielmahanst@gmail.com"
         },
         general: {
             tag: "Consultas generales",
@@ -158,7 +158,7 @@ export const es = {
         legal: "Legal",
         location: "Estamos en Barcelona",
         copyright: "© 2025 Denail, S.L.",
-        cta: "Responde unas preguntas",
+        cta: "Respond a Few Cuestions",
         links: {
             product: ["¿Qué es Denail?", "Cómo funciona", "Para Equipos", "Hoja de ruta", "FAQ"],
             resources: ["Blog", "Comunidad", "Newsletter", "Lista de espera"],

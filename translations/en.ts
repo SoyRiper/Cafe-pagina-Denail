@@ -45,7 +45,7 @@ export const en = {
     },
     buildFuture: {
         title: "Build the future of coffee with us",
-        cta: "Respond a Few Questions"
+        cta: "Respond a Few Cuestions"
     },
     metrics: {
         title: "Wake-up Metrics",
@@ -88,7 +88,7 @@ export const en = {
                 title: "Thanks for getting this far",
                 text1: "Denail is crafted with honesty, clarity, and a public mindset. No shortcuts, no secrets just a better way to do things.",
                 text2: "We'd love your perspective and we've got a small gift waiting for you when you finish our short questionnaire",
-                cta: "Help us validate"
+                cta: "Respond a Few Cuestions"
             }
         }
     },
@@ -158,7 +158,7 @@ export const en = {
         legal: "Legal",
         location: "We're Based In Barcelona",
         copyright: "© 2025 Denail, S.L.",
-        cta: "Respond a Few Questions",
+        cta: "Respond a Few Cuestions",
         links: {
             product: ["What is Denail", "How it works", "For Teams", "Roadmap", "FAQ"],
             resources: ["Blog", "Community", "Newsletter", "Waitlist"],
