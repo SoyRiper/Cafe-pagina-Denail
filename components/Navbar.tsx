@@ -139,8 +139,8 @@ const Navbar: React.FC<NavbarProps> = ({ setView, currentView }) => {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-[100] h-20 flex items-center px-6 md:px-20 transition-all duration-300 ${scrolled
-          ? 'bg-white/90 dark:bg-black/90 backdrop-blur-xl border-b border-zinc-200/50 dark:border-zinc-800/50'
-          : 'bg-transparent'
+          ? 'bg-white/70 dark:bg-black/60 backdrop-blur-xl border-b border-zinc-200/50 dark:border-zinc-800/50 shadow-sm'
+          : 'bg-white/30 dark:bg-black/20 backdrop-blur-md border-b border-zinc-100/10 dark:border-zinc-900/10'
           }`}
       >
         {/* Logo Left */}
