@@ -4,7 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
 
 const Footer = () => {
-  const { t } = useLanguage();
+  const { t, language, setLanguage } = useLanguage();
 
   // Mapping exactly to mockup headers: PRODUCT, RESOURCES, PRODUCT, PRODUCT
   const footerSections = [
@@ -58,16 +58,40 @@ const Footer = () => {
         <div className="h-px w-full bg-black/10 dark:bg-white/10 my-12 relative z-10"></div>
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
-          <div className="text-black/50 dark:text-zinc-500 text-[10px] font-bold uppercase tracking-widest">
+          <div className="text-black/50 dark:text-zinc-500 text-[10px] font-bold uppercase tracking-widest text-center md:text-left">
             {t.footer.copyright}
           </div>
 
-          {/* Social Icons (as seen in mockup bottom centerish) */}
-          <div className="flex items-center gap-6">
-            <a href="#" className="text-black/50 dark:text-white/50 hover:text-[#FF8A00] transition-colors"><Linkedin size={18} /></a>
-            <a href="#" className="text-black/50 dark:text-white/50 hover:text-[#FF8A00] transition-colors"><Instagram size={18} /></a>
-            <a href="#" className="text-black/50 dark:text-white/50 hover:text-[#FF8A00] transition-colors"><Youtube size={18} /></a>
-            <a href="#" className="text-black/50 dark:text-white/50 hover:text-[#FF8A00] transition-colors"><Twitter size={18} /></a>
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            {/* Language Toggle */}
+            <div className="flex items-center bg-black/5 dark:bg-white/5 rounded-full p-1 h-10 border border-black/5 dark:border-white/5">
+              <button
+                onClick={() => setLanguage('en')}
+                className={`px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-tight transition-all ${language === 'en'
+                  ? 'bg-white dark:bg-zinc-800 text-black dark:text-white shadow-sm'
+                  : 'text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white'
+                  }`}
+              >
+                EN
+              </button>
+              <button
+                onClick={() => setLanguage('es')}
+                className={`px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-tight transition-all ${language === 'es'
+                  ? 'bg-white dark:bg-zinc-800 text-black dark:text-white shadow-sm'
+                  : 'text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white'
+                  }`}
+              >
+                ES
+              </button>
+            </div>
+
+            {/* Social Icons */}
+            <div className="flex items-center gap-6">
+              <a href="#" className="text-black/40 dark:text-white/40 hover:text-[#FF8A00] transition-colors"><Linkedin size={18} /></a>
+              <a href="#" className="text-black/40 dark:text-white/40 hover:text-[#FF8A00] transition-colors"><Instagram size={18} /></a>
+              <a href="#" className="text-black/40 dark:text-white/40 hover:text-[#FF8A00] transition-colors"><Youtube size={18} /></a>
+              <a href="#" className="text-black/40 dark:text-white/40 hover:text-[#FF8A00] transition-colors"><Twitter size={18} /></a>
+            </div>
           </div>
 
           <div className="text-black/50 dark:text-zinc-500 text-[10px] font-bold uppercase tracking-widest">

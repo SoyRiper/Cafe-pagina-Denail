@@ -9,11 +9,12 @@ import Metrics from './Metrics';
 import Hiring from './Hiring';
 
 const fadeInUp = {
-   hidden: { opacity: 0, y: 50 },
+   hidden: { opacity: 0, y: 60, filter: 'blur(10px)' },
    show: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+      filter: 'blur(0px)',
+      transition: { duration: 1, ease: [0.22, 1, 0.36, 1] }
    }
 };
 
@@ -46,11 +47,11 @@ const Hero = () => {
                   className="relative z-10 max-w-4xl mx-auto text-center mb-12 md:mb-16 px-4"
                >
                   <motion.h1 variants={fadeInUp} className="heading-massive text-black dark:text-white mb-8 tracking-tighter leading-[0.9]">
-                     {t.hero.title}
+                     The AI <span className="animate-gradient-text">Coffee Machine</span>
                   </motion.h1>
                   <motion.p
                      variants={fadeInUp}
-                     className="text-zinc-500 dark:text-zinc-400 text-sm md:text-lg font-medium max-w-2xl mx-auto leading-relaxed tracking-wide"
+                     className="text-zinc-500 dark:text-zinc-400 text-base md:text-xl font-medium max-w-2xl mx-auto leading-relaxed tracking-tight"
                   >
                      {t.hero.subtitle}
                   </motion.p>
@@ -66,7 +67,7 @@ const Hero = () => {
                >
                   <img
                      src="/01/source/machine_closeup_correct.png"
-                     className="w-full h-auto object-contain drop-shadow-2xl translate-y-2"
+                     className="w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(255,138,0,0.2)] dark:drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] animate-float"
                      alt="Denail AI Coffee Machine Hero"
                   />
                </motion.div>

@@ -157,7 +157,7 @@ export const es = {
         company: "Compañía",
         legal: "Legal",
         location: "Estamos en Barcelona",
-        copyright: "© 2025 Denail, S.L.",
+        copyright: "© 2026 Denail, S.L.",
         cta: "Respond a Few Cuestions",
         links: {
             product: ["¿Qué es Denail?", "Cómo funciona", "Para Equipos", "Hoja de ruta", "FAQ"],

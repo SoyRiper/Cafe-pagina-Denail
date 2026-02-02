@@ -15,6 +15,7 @@ const Navbar: React.FC<NavbarProps> = ({ setView, currentView }) => {
   const [user, setUser] = useState<any>(null);
   const [profile, setProfile] = useState<any>(null);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
+  const [imageError, setImageError] = useState(false);
   const [theme, setTheme] = useState(typeof window !== 'undefined' ? localStorage.getItem('theme') || 'light' : 'light');
   const { language, setLanguage, t } = useLanguage();
 
@@ -63,7 +64,10 @@ const Navbar: React.FC<NavbarProps> = ({ setView, currentView }) => {
       const currentUser = session?.user ?? null;
       setUser(currentUser);
       if (currentUser) syncProfile(currentUser);
-      else setProfile(null);
+      else {
+        setProfile(null);
+        setImageError(false);
+      }
     });
 
     return () => subscription.unsubscribe();
@@ -85,6 +89,7 @@ const Navbar: React.FC<NavbarProps> = ({ setView, currentView }) => {
 
       if (existingProfile) {
         setProfile(existingProfile);
+        setImageError(false);
       } else {
         // Create profile if not exists
         const newProfile = {
@@ -170,27 +175,7 @@ const Navbar: React.FC<NavbarProps> = ({ setView, currentView }) => {
               {t.navbar.validate}
             </button>
 
-            {/* Language Toggle */}
-            <div className="flex items-center bg-zinc-100 dark:bg-zinc-800 rounded-full p-1 h-10">
-              <button
-                onClick={() => setLanguage('en')}
-                className={`px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-tighter transition-all ${language === 'en'
-                  ? 'bg-white dark:bg-black text-black dark:text-white shadow-sm'
-                  : 'text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200'
-                  }`}
-              >
-                EN
-              </button>
-              <button
-                onClick={() => setLanguage('es')}
-                className={`px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-tighter transition-all ${language === 'es'
-                  ? 'bg-white dark:bg-black text-black dark:text-white shadow-sm'
-                  : 'text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200'
-                  }`}
-              >
-                ES
-              </button>
-            </div>
+
 
             {/* Theme Toggle */}
             <button
@@ -208,8 +193,13 @@ const Navbar: React.FC<NavbarProps> = ({ setView, currentView }) => {
                   onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
                   className="w-10 h-10 rounded-full overflow-hidden border-2 border-zinc-100/50 hover:border-black transition-all flex items-center justify-center bg-zinc-50"
                 >
-                  {profile?.avatar_url ? (
-                    <img src={profile.avatar_url} alt="Profile" className="w-full h-full object-cover" />
+                  {profile?.avatar_url && !imageError ? (
+                    <img
+                      src={profile.avatar_url}
+                      alt="Profile"
+                      className="w-full h-full object-cover"
+                      onError={() => setImageError(true)}
+                    />
                   ) : (
                     <User size={20} className="text-zinc-500" />
                   )}
@@ -226,8 +216,13 @@ const Navbar: React.FC<NavbarProps> = ({ setView, currentView }) => {
                     >
                       <div className="flex items-center gap-3 p-4">
                         <div className="w-12 h-12 rounded-full overflow-hidden bg-zinc-100 border-2 border-white shadow-sm flex items-center justify-center">
-                          {profile?.avatar_url ? (
-                            <img src={profile.avatar_url} alt="Profile" className="w-full h-full object-cover" />
+                          {profile?.avatar_url && !imageError ? (
+                            <img
+                              src={profile.avatar_url}
+                              alt="Profile"
+                              className="w-full h-full object-cover"
+                              onError={() => setImageError(true)}
+                            />
                           ) : (
                             <User size={24} className="text-zinc-400" />
                           )}
@@ -318,7 +313,7 @@ const Navbar: React.FC<NavbarProps> = ({ setView, currentView }) => {
               className="relative bg-white dark:bg-zinc-900 w-full max-w-lg md:max-w-xl rounded-[2rem] md:rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col p-6 md:p-10 gap-6 md:gap-6 max-h-[85vh] overflow-y-auto hide-scrollbar"
             >
               <div className="flex justify-between items-center shrink-0">
-                <span className="text-xl md:text-2xl font-black tracking-tighter text-black dark:text-white uppercase">DENAIL</span>
+                <span className="logo-stout text-xl md:text-2xl text-black dark:text-white">DENAIL</span>
                 <button onClick={() => setIsMenuOpen(false)} className="text-zinc-800 dark:text-zinc-200 p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800">
                   <X size={24} className="md:w-7 md:h-7" strokeWidth={2.5} />
                 </button>
