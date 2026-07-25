@@ -1,20 +1,53 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# ☕ Denail — AI-Powered Smart Coffee Machine (Full-Stack Web App)
 
-# Run and deploy your AI Studio app
+![React](https://img.shields.io/badge/React-19.0-blue?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue?logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-6.2-purple?logo=vite)
+![Supabase](https://img.shields.io/badge/Supabase-Backend-green?logo=supabase)
+![Gemini AI](https://img.shields.io/badge/Gemini_AI-API-orange?logo=google)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-UI-pink?logo=framer)
 
-This contains everything you need to run your app locally.
+Una plataforma web interactiva de alta fidelidad para **Denail**, una cafetera inteligente potenciada por Inteligencia Artificial (Google Gemini) diseñada para optimizar la productividad mediante análisis profundo y recomendaciones personalizadas.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1AeVoWpH4xY09hvVJzuAoTtUqpm1-G-mR
+## 🚀 Características Principales
 
-## Run Locally
+- **Frontend de Última Generación**: Interfaz reactiva construida con React 19 y TypeScript para garantizar seguridad de tipos.
+- **Inteligencia Artificial Integrada**: Integración con **Google Gemini API** para procesamiento inteligente de hábitos de consumo.
+- **Integración Backend (BaaS)**: Conexión con **Supabase** para persistencia de datos y backend serverless.
+- **UI/UX Fluida**: Micro-animaciones dinámicas creadas con `framer-motion` e iconografía moderna con `lucide-react`.
+- **Soporte Multilingüe**: Estructura i18n multilenguaje nativa.
 
-**Prerequisites:**  Node.js
+## 🛠️ Stack Tecnológico
 
+- **Frontend**: React 19, TypeScript, Vite, TailwindCSS / CSS3.
+- **AI Integration**: Google Gemini API.
+- **Backend / Database**: Supabase (PostgreSQL / Authentication).
+- **Animaciones e Iconos**: Framer Motion, Lucide React.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 💻 Instalación y Ejecución Local
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/SoyRiper/Cafe-pagina-Denail.git
+   cd Cafe-pagina-Denail
+   ```
+
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+
+3. Configura tus variables de entorno en `.env.local`:
+   ```env
+   VITE_GEMINI_API_KEY=tu_gemini_api_key
+   VITE_SUPABASE_URL=tu_supabase_url
+   VITE_SUPABASE_ANON_KEY=tu_supabase_anon_key
+   ```
+
+4. Ejecuta el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+
+---
+Desarrollado por [SoyRiper](https://github.com/SoyRiper)
